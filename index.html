@@ -1,0 +1,326 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Portfolio website for Alwin A. Alon, Junior Software Developer."
+    />
+    <title>Alwin A. Alon | Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="hero" id="top">
+      <nav class="nav">
+        <a class="brand" href="#top">Alwin A. Alon</a>
+        <div class="nav-links">
+          <a href="#about">About</a>
+          <a href="#skills">Skills</a>
+          <a href="#projects">Projects</a>
+          <a href="#experience">Experience</a>
+          <a href="#education">Education</a>
+        </div>
+      </nav>
+
+      <div class="hero-content">
+        <div>
+          <p class="eyebrow">Junior Software Developer</p>
+          <h1>
+            Building practical software with full-stack depth and product focus.
+          </h1>
+          <p class="hero-copy">
+            BS Information Systems graduate with hands-on experience building
+            full-stack systems in React, TypeScript, Laravel, and FastAPI. I
+            enjoy turning complex business workflows into clear, reliable
+            software.
+          </p>
+          <div class="hero-actions">
+            <a class="button primary" href="#projects">View Projects</a>
+            <a
+              class="button secondary"
+              href="mailto:alwinalon0@gmail.com"
+              id="contactButton"
+              >Contact Me</a
+            >
+          </div>
+        </div>
+        <div class="hero-card">
+          <h2>Quick Profile</h2>
+          <ul>
+            <li>
+              <strong>Location:</strong> Caloocan City, Metro Manila,
+              Philippines
+            </li>
+            <li><strong>Email:</strong> alwinalon0@gmail.com</li>
+            <li><strong>Phone:</strong> 0991 074 0584</li>
+            <li>
+              <strong>Focus:</strong> Web & mobile applications, BI tools, AI
+              integrations
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="section" id="about">
+        <div class="section-heading">
+          <p class="eyebrow">Summary</p>
+          <h2>
+            From systems design to deployment, I bring a balanced product and
+            engineering mindset.
+          </h2>
+        </div>
+        <p>
+          I am a BS Information Systems graduate with hands-on full-stack
+          development experience across React, TypeScript, Laravel, and FastAPI.
+          My background includes building and shipping an enterprise-grade
+          dealership management platform with role-based access control, BI
+          dashboards, and AI-driven support. I am confident working across the
+          stack, from database design to responsive UI, and I value Git-based
+          collaboration in team settings.
+        </p>
+      </section>
+
+      <section class="section" id="skills">
+        <div class="section-heading">
+          <p class="eyebrow">Technical Skills</p>
+          <h2>Tools and technologies I work with.</h2>
+        </div>
+        <div class="card-grid">
+          <article class="info-card">
+            <h3>Languages</h3>
+            <p>
+              Java, SQL, Python, PHP, JavaScript, TypeScript, C++, HTML, CSS
+            </p>
+          </article>
+          <article class="info-card">
+            <h3>Frameworks & Libraries</h3>
+            <p>
+              React.js, React Native, Spring Boot, FastAPI, Laravel, Tailwind
+              CSS
+            </p>
+          </article>
+          <article class="info-card">
+            <h3>Databases & Tools</h3>
+            <p>
+              MySQL, PostgreSQL, Git, GitHub, GitLab, Bitbucket, Termius, Expo
+            </p>
+          </article>
+          <article class="info-card">
+            <h3>Cloud & Infrastructure</h3>
+            <p>DigitalOcean VPS, Hostinger, Linux VPS management</p>
+          </article>
+          <article class="info-card">
+            <h3>Specializations</h3>
+            <p>
+              Business Intelligence analytics, AI/RAG integration, RBAC systems
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" id="projects">
+        <div class="section-heading">
+          <p class="eyebrow">Projects</p>
+          <h2>
+            Selected work that reflects my engineering and problem-solving
+            approach.
+          </h2>
+        </div>
+        <div class="project-list">
+          <article class="project-card">
+            <div class="project-meta">2025 · Enterprise Platform</div>
+            <h3>ATOM — Automated Transcycle Operations & Management</h3>
+            <p>
+              A full-stack dealership management system for Transcycle across 5
+              branches, supporting inventory, loans, and retail operations on
+              web and Android platforms.
+            </p>
+            <ul>
+              <li>
+                Designed a 7-tier RBAC matrix to enforce strict data isolation
+                across roles.
+              </li>
+              <li>
+                Built AI-driven BI dashboards that transformed raw dealership
+                data into actionable insights.
+              </li>
+              <li>
+                Integrated a RAG-based customer support chatbot to automate
+                contextual inquiries.
+              </li>
+              <li>
+                Led QA validation covering security and performance for
+                stakeholders across all branches.
+              </li>
+            </ul>
+            <div class="project-links">
+              <a href="https://atom-project.site/">Link</a>
+              <!-- <a href="#">GitHub</a> -->
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-meta">2025 · In Progress</div>
+            <h3>SpeaQL — AI-Powered Natural Language Database Interface</h3>
+            <p>
+              A natural language-to-SQL engine built to support zero-config and
+              high-precision query modes.
+            </p>
+            <ul>
+              <li>
+                Engineered a hybrid NL2SQL pipeline with LangChain-based context
+                injection.
+              </li>
+              <li>
+                Implemented validation middleware to detect and block SQL
+                injection attempts.
+              </li>
+              <li>
+                Built a responsive Streamlit interface for rapid query iteration
+                and feedback.
+              </li>
+              <li>
+                Benchmarked performance across PostgreSQL and SQLite to guide
+                tuning decisions.
+              </li>
+            </ul>
+            <div class="project-links">
+              <a href="#">GitHub</a>
+              <a href="#">Demo Video</a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" id="experience">
+        <div class="section-heading">
+          <p class="eyebrow">Work Experience</p>
+          <h2>
+            Experience that strengthened both my technical and collaborative
+            skills.
+          </h2>
+        </div>
+        <div class="timeline">
+          <article class="timeline-item">
+            <div class="timeline-date">May 2025 – August 2025</div>
+            <div>
+              <h3>Software Engineer Intern</h3>
+              <p class="company">
+                NLP Business Development Services, Culiat, Quezon City
+              </p>
+              <ul>
+                <li>
+                  Contributed to full-stack development, maintenance, and
+                  debugging of web applications.
+                </li>
+                <li>
+                  Collaborated in Git and Bitbucket-based workflows for sprint
+                  delivery and production releases.
+                </li>
+                <li>
+                  Gained hands-on experience with secure hardware-software
+                  integrations and local network environments.
+                </li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="timeline-item">
+            <div class="timeline-date">July 2023 – August 2023</div>
+            <div>
+              <h3>SPES Trainee — IT Support / Technical Training Assistant</h3>
+              <p class="company">
+                LGU Training Center (BCO Assigned), Libis, Caloocan City
+              </p>
+              <ul>
+                <li>
+                  Delivered technical training and client-facing IT support to
+                  students.
+                </li>
+                <li>
+                  Diagnosed and resolved hardware, software, peripheral, and
+                  network issues.
+                </li>
+                <li>
+                  Maintained classroom IT infrastructure and supported smooth
+                  digital operations.
+                </li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" id="education">
+        <div class="section-heading">
+          <p class="eyebrow">Education</p>
+          <h2>
+            Academic foundation in information systems and software development.
+          </h2>
+        </div>
+        <div class="education-card">
+          <h3>Bachelor of Science in Information Systems</h3>
+          <p class="company">University of Caloocan City · 2022 – 2026</p>
+          <p>
+            Built a strong foundation in systems analysis, database management,
+            software development, and business-oriented technology solutions.
+          </p>
+        </div>
+      </section>
+
+      <section class="section" id="contact">
+        <div class="section-heading">
+          <p class="eyebrow">Contact Me</p>
+          <h2>Let’s talk about your next project or opportunity.</h2>
+        </div>
+        <div class="contact-card">
+          <p>
+            Send a message directly to my inbox and I’ll get back to you as soon
+            as possible.
+          </p>
+          <form id="contactForm">
+            <div class="form-row">
+              <label for="name">Name</label>
+              <input id="name" name="name" type="text" required />
+            </div>
+            <div class="form-row">
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" required />
+            </div>
+            <div class="form-row">
+              <label for="message">Message</label>
+              <textarea
+                id="message"
+                name="message"
+                rows="5"
+                required
+              ></textarea>
+            </div>
+            <button class="button primary" type="submit">Send Message</button>
+            <p id="formStatus" class="form-status" aria-live="polite"></p>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>© <span id="year"></span> Alwin A. Alon. All rights reserved.</p>
+      <div class="footer-links">
+        <a href="mailto:alwinalon0@gmail.com">Email</a>
+        <a href="https://github.com/alweeen">GitHub</a>
+        <a href="https://www.linkedin.com/in/alwin-alon-3160b4370/">LinkedIn</a>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
