@@ -44,3 +44,20 @@ if (contactForm && formStatus) {
     contactForm.reset();
   });
 }
+
+// const cursorBlur = document.createElement("div");
+// cursorBlur.className = "cursor-blur";
+// document.body.appendChild(cursorBlur);
+
+// window.addEventListener("mousemove", (event) => {
+//   cursorBlur.style.left = `${event.clientX}px`;
+//   cursorBlur.style.top = `${event.clientY}px`;
+// });
+
+// window.addEventListener("mousedown", () => {
+//   cursorBlur.classList.add("cursor-blur--small");
+// });
+
+// window.addEventListener("mouseup", () => {
+//   cursorBlur.classList.remove("cursor-blur--small");
+// });
