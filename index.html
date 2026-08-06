@@ -5,590 +5,757 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Portfolio website for Alwin A. Alon, Junior Software Developer."
+      content="Portfolio of Alwin A. Alon - Full-Stack Developer & BS Information Systems graduate specializing in React, TypeScript, Laravel, FastAPI, AI/RAG, and Enterprise Systems."
     />
-    <title>Alwin A. Alon | Portfolio</title>
+    <title>Alwin A. Alon | Full-Stack Developer & Systems Engineer</title>
+    
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
+    
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <header class="hero" id="top">
-      <div class="hero-inner">
-        <nav class="nav">
-          <a class="brand" href="#top">Alwin A. Alon</a>
-          <div class="nav-links">
-            <a href="#about">About</a>
-            <a href="#skills">Skills</a>
-            <a href="#projects">Projects</a>
-            <a href="#experience">Experience</a>
-            <a href="#education">Education</a>
-          </div>
+    <!-- Background Glow Canvas Elements -->
+    <div class="glow-bg-mesh" aria-hidden="true">
+      <div class="glow-sphere glow-sphere-1"></div>
+      <div class="glow-sphere glow-sphere-2"></div>
+      <div class="glow-sphere glow-sphere-3"></div>
+    </div>
+    
+    <!-- Cursor Interactive Ambient Light -->
+    <div class="cursor-glow" id="cursorGlow" aria-hidden="true"></div>
+
+    <!-- Navigation Header -->
+    <header class="header" id="header">
+      <div class="container nav-container">
+        <a class="nav-brand" href="#hero">
+          <span class="brand-avatar">
+            <img src="assets/2x2-AI-removebg-preview.png" alt="Alwin A. Alon miniature portrait" />
+          </span>
+          <span class="brand-text">Alwin <span class="accent-text">A. Alon</span></span>
+        </a>
+
+        <nav class="nav-menu" id="navMenu">
+          <a class="nav-link active" href="#about">About</a>
+          <a class="nav-link" href="#experience">Experience</a>
+          <a class="nav-link" href="#projects">Projects</a>
+          <a class="nav-link" href="#skills">Skills</a>
+          <a class="nav-link" href="#certifications">Certifications</a>
+          <a class="nav-link" href="#education">Education</a>
+          <a class="nav-link" href="#contact">Contact</a>
         </nav>
 
-        <div class="hero-content">
-        <div class="hero-copy-block">
-          <p class="eyebrow">Junior Software Developer</p>
-          <h1>
-            Crafting modern web applications with clarity, reliability, and
-            meaningful business impact.
-          </h1>
-          <p class="hero-copy">
-            I build practical full-stack systems using React, TypeScript,
-            Laravel, and FastAPI. My work focuses on clean architecture,
-            dependable performance, and polished interfaces for real users.
-          </p>
-          <div class="hero-actions">
-            <a class="button primary" href="#projects">View Projects</a>
-            <a
-              class="button secondary"
-              href="mailto:alwinalon0@gmail.com"
-              id="contactButton"
-              >Contact Me</a
-            >
-          </div>
-          <div class="hero-metrics">
-            <div>
-              <strong>2+</strong>
-              <span>Delivered apps</span>
-            </div>
-            <div>
-              <strong>3+</strong>
-              <span>Enterprise collaborators</span>
-            </div>
-            <div>
-              <strong>100%</strong>
-              <span>Responsive UIs</span>
-            </div>
-          </div>
+        <div class="nav-actions">
+          <a class="btn btn-sm btn-outline" href="mailto:alwinalon0@gmail.com">
+            <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="2" y="4" width="20" height="16" rx="2"/>
+              <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
+            </svg>
+            Email Me
+          </a>
+          <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle Navigation Menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
         </div>
-        <aside class="hero-panel">
-          <div class="hero-panel-card">
-            <h2>Quick Profile</h2>
-            <ul>
-              <li>
-                <strong>Location:</strong> Caloocan City, Metro Manila,
-                Philippines
-              </li>
-              <li><strong>Email:</strong> alwinalon0@gmail.com</li>
-              <li><strong>Phone:</strong> 0991 074 0584</li>
-              <li>
-                <strong>Focus:</strong> Web & mobile apps, BI tools, AI
-                integrations
-              </li>
-            </ul>
-          </div>
-          <div class="hero-panel-card hero-panel-card--accent">
-            <h3>What I build</h3>
-            <p>
-              Role-based platforms, analytics dashboards, and API-driven
-              workflows that support teams and improve outcomes.
-            </p>
-            <h3>Most Comfortable Languages/Frameworks</h3>
-            <div class="hero-skill-chips">
-              <span>PHP</span>
-              <span>Java</span>
-              <span>React</span>
-              <span>TypeScript</span>
-              <span>Laravel</span>
-              <span>FastAPI</span>
-            </div>
-          </div>
-        </aside>
       </div>
     </header>
 
     <main>
+      <!-- Hero Section -->
+      <section class="hero-section" id="hero">
+        <div class="container hero-grid">
+          <div class="hero-content">
+            <div class="badge-pill">
+              <span class="pulse-dot"></span>
+              <span>BS Information Systems Graduate & Full-Stack Developer</span>
+            </div>
+
+            <h1 class="hero-title">
+              Engineering <span class="gradient-text">Enterprise Platforms</span> & AI-Driven Digital Solutions.
+            </h1>
+
+            <p class="hero-subtitle">
+              Full-Stack Developer experienced in <strong>React, TypeScript, Laravel, and FastAPI</strong>. Creator of 
+              <a href="#projects" class="inline-link">ATOM</a> (deployed across 5 live branch locations) and 
+              <a href="#projects" class="inline-link">SpeaQL</a> (hybrid NL2SQL engine). Dedicated to building clean, secure, and impactful systems.
+            </p>
+
+            <div class="hero-cta-group">
+              <a class="btn btn-primary" href="#projects">
+                <span>View My Work</span>
+                <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M5 12h14M12 5l7 7-7 7"/>
+                </svg>
+              </a>
+              <a class="btn btn-secondary" href="mailto:alwinalon0@gmail.com" id="copyEmailBtn">
+                <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                  <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                </svg>
+                <span id="copyEmailText">alwinalon0@gmail.com</span>
+              </a>
+            </div>
+
+            <div class="hero-stats">
+              <div class="stat-card">
+                <div class="stat-number">5+</div>
+                <div class="stat-label">Live Branches Deployed</div>
+              </div>
+              <div class="stat-card">
+                <div class="stat-number">7-Tier</div>
+                <div class="stat-label">RBAC Security Matrix</div>
+              </div>
+              <div class="stat-card">
+                <div class="stat-number">2+</div>
+                <div class="stat-label">Enterprise Platforms</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-visual">
+            <div class="avatar-card-wrapper">
+              <div class="avatar-frame">
+                <img 
+                  src="assets/2x2-AI-removebg-preview.png" 
+                  alt="Alwin A. Alon - Full-Stack Developer Profile Photo" 
+                  class="avatar-img" 
+                />
+                <div class="avatar-glow-ring"></div>
+              </div>
+
+              <!-- Floating Tech Badges -->
+              <div class="floating-badge badge-top-right">
+                <span class="badge-icon">⚡</span>
+                <div class="badge-text">
+                  <strong>Full-Stack</strong>
+                  <span>React & Laravel</span>
+                </div>
+              </div>
+
+              <div class="floating-badge badge-bottom-left">
+                <span class="badge-icon">🤖</span>
+                <div class="badge-text">
+                  <strong>AI & RAG</strong>
+                  <span>Gemini & LangChain</span>
+                </div>
+              </div>
+
+              <div class="location-tag">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                  <circle cx="12" cy="10" r="3"></circle>
+                </svg>
+                <span>Caloocan City, Metro Manila</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Professional Summary / About Section -->
       <section class="section" id="about">
-        <div class="section-heading">
-          <p class="eyebrow">Summary</p>
-          <h2>
-            From systems design to deployment, I bring a balanced product and
-            engineering mindset.
-          </h2>
-        </div>
-        <p>
-          I am a BS Information Systems graduate with hands-on full-stack
-          development experience across React, TypeScript, Laravel, and FastAPI.
-          My background includes building and shipping an enterprise-grade
-          dealership management platform with role-based access control, BI
-          dashboards, and AI-driven support.
-        </p>
-        <div class="highlight-grid">
-          <article class="highlight-card">
-            <h3>Product-first delivery</h3>
-            <p>
-              I turn ideas into working systems with clear UX, reusable code,
-              and reliable deployment flows.
-            </p>
-          </article>
-          <article class="highlight-card">
-            <h3>Data-driven solutions</h3>
-            <p>
-              From BI reporting to AI workflows, I focus on making data useful
-              and easy to act on.
-            </p>
-          </article>
-          <article class="highlight-card">
-            <h3>Collaborative engineering</h3>
-            <p>
-              I thrive in Git-based teams and deliver maintainable code across
-              frontend, backend, and infrastructure.
-            </p>
-          </article>
+        <div class="container">
+          <div class="section-header text-center">
+            <p class="section-eyebrow">Professional Overview</p>
+            <h2 class="section-title">About Me</h2>
+            <div class="title-underline"></div>
+          </div>
+
+          <div class="about-card glass-card">
+            <div class="about-summary">
+              <p class="lead-text">
+                I am a <strong>BS Information Systems graduate</strong> with hands-on full-stack development experience across 
+                <strong>React, TypeScript, Laravel, CodeIgniter, and FastAPI</strong>.
+              </p>
+              <p>
+                I built and shipped <strong>ATOM</strong>, a multi-platform enterprise dealership system (Web & Android) deployed across 5 live branches featuring 7-tier RBAC, AI-driven BI dashboards, and a RAG-based customer support chatbot.
+              </p>
+              <p>
+                Experienced in Git, Bitbucket, and Trello sprint workflows with direct production database management exposure. Strong communicator, able to bridge technical and non-technical stakeholders clearly and confidently.
+              </p>
+            </div>
+
+            <div class="pillars-grid">
+              <div class="pillar-item">
+                <div class="pillar-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                  </svg>
+                </div>
+                <h3>Full-Stack Engineering</h3>
+                <p>Architecting robust Web & Mobile solutions with React, TypeScript, Laravel, and REST APIs.</p>
+              </div>
+
+              <div class="pillar-item">
+                <div class="pillar-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
+                    <polyline points="3.27 6.96 12 12.01 20.73 6.96"/>
+                    <line x1="12" y1="22.08" x2="12" y2="12"/>
+                  </svg>
+                </div>
+                <h3>AI & BI Integration</h3>
+                <p>Building NL2SQL engines, LangChain context pipelines, and RAG chatbots for visual business intelligence.</p>
+              </div>
+
+              <div class="pillar-item">
+                <div class="pillar-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+                    <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+                  </svg>
+                </div>
+                <h3>Database & Security</h3>
+                <p>Enforcing RBAC isolation, data integrity, SQL injection validation, and production database management.</p>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
-      <section class="section" id="skills">
-        <div class="section-heading">
-          <p class="eyebrow">Technical Skills</p>
-          <h2>Tools and technologies I work with.</h2>
-        </div>
-        <!-- <div class="tech-grid">
-          <article class="tech-card">
-            <div class="tech-logo" aria-hidden="true">
-              <svg
-                viewBox="0 0 64 64"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <circle cx="32" cy="32" r="5" fill="#61DAFB" />
-                <ellipse
-                  cx="32"
-                  cy="32"
-                  rx="20"
-                  ry="6"
-                  stroke="#61DAFB"
-                  stroke-width="3"
-                />
-                <ellipse
-                  cx="32"
-                  cy="32"
-                  rx="20"
-                  ry="6"
-                  transform="rotate(60 32 32)"
-                  stroke="#61DAFB"
-                  stroke-width="3"
-                />
-                <ellipse
-                  cx="32"
-                  cy="32"
-                  rx="20"
-                  ry="6"
-                  transform="rotate(-60 32 32)"
-                  stroke="#61DAFB"
-                  stroke-width="3"
-                />
-              </svg>
-            </div>
-            <p>React</p>
-          </article>
-          <article class="tech-card">
-            <div class="tech-logo" aria-hidden="true">
-              <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
-                <rect
-                  x="8"
-                  y="8"
-                  width="48"
-                  height="48"
-                  rx="12"
-                  fill="#007ACC"
-                />
-                <text
-                  x="32"
-                  y="42"
-                  text-anchor="middle"
-                  font-family="Inter, sans-serif"
-                  font-size="26"
-                  font-weight="800"
-                  fill="#fff"
-                >
-                  TS
-                </text>
-              </svg>
-            </div>
-            <p>TypeScript</p>
-          </article>
-          <article class="tech-card">
-            <div class="tech-logo" aria-hidden="true">
-              <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
-                <path d="M20 20h24v8H20z" fill="#FF2D20" />
-                <path d="M26 28h18v8H26z" fill="#C11B14" />
-                <path d="M32 36h10v6H32z" fill="#FF6B6B" />
-              </svg>
-            </div>
-            <p>Laravel</p>
-          </article>
-          <article class="tech-card">
-            <div class="tech-logo" aria-hidden="true">
-              <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
-                <path d="M18 22h28v20H18z" fill="#009688" opacity="0.22" />
-                <path d="M22 26h20v8H22z" fill="#009688" />
-                <path d="M22 36h16v6H22z" fill="#00796B" />
-                <path d="M22 44h12v4H22z" fill="#004D40" />
-              </svg>
-            </div>
-            <p>FastAPI</p>
-          </article>
-          <article class="tech-card">
-            <div class="tech-logo" aria-hidden="true">
-              <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M20 18c-6 0-10 4-10 9v10c0 5 4 9 10 9h12c6 0 10-4 10-9V27c0-5-4-9-10-9H20Z"
-                  fill="#306998"
-                />
-                <path
-                  d="M44 46c6 0 10-4 10-9V27c0-5-4-9-10-9H32c-6 0-10 4-10 9v10c0 5 4 9 10 9h12Z"
-                  fill="#FFE873"
-                />
-              </svg>
-            </div>
-            <p>Python</p>
-          </article>
-          <article class="tech-card">
-            <div class="tech-logo" aria-hidden="true">
-              <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
-                <path d="M20 16l24 16-24 16V16Z" fill="#F05032" />
-                <circle cx="20" cy="16" r="4" fill="#F05032" />
-                <circle cx="44" cy="32" r="4" fill="#F05032" />
-                <circle cx="20" cy="48" r="4" fill="#F05032" />
-                <path
-                  d="M20 16L44 32M24 34L40 44"
-                  stroke="#fff"
-                  stroke-width="3"
-                  stroke-linecap="round"
-                />
-              </svg>
-            </div>
-            <p>Git</p>
-          </article>
-          <article class="tech-card">
-            <div class="tech-logo" aria-hidden="true">
-              <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M32 12c-14 0-20 8-20 17v14c0 9 6 17 20 17s20-8 20-17V29C52 20 46 12 32 12Z"
-                  fill="#00758F"
-                />
-                <path d="M24 20c0-4 4-8 8-8s8 4 8 8v4H24v-4Z" fill="#FFF" />
-              </svg>
-            </div>
-            <p>MySQL</p>
-          </article>
-        </div> -->
-        <div class="card-grid">
-          <article class="info-card">
-            <div class="info-card-header">
-              <div class="info-card-icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M8 6L4 12L8 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                  <path d="M16 6L20 12L16 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                  <path d="M12 4L12 20" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+      <!-- Work Experience Section -->
+      <section class="section bg-alt" id="experience">
+        <div class="container">
+          <div class="section-header text-center">
+            <p class="section-eyebrow">Career Path</p>
+            <h2 class="section-title">Work Experience</h2>
+            <div class="title-underline"></div>
+          </div>
+
+          <div class="timeline-wrapper">
+            <!-- Item 1: Cerventech -->
+            <div class="timeline-card glass-card">
+              <div class="timeline-badge">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="2" y="7" width="20" height="14" rx="2" ry="2"/>
+                  <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/>
                 </svg>
               </div>
-              <h3>Languages</h3>
+              <div class="timeline-content">
+                <div class="timeline-header">
+                  <div>
+                    <h3 class="role-title">Field Service Engineer (On-Call)</h3>
+                    <div class="company-name">Cerventech</div>
+                  </div>
+                  <div class="period-pill">July 2026 – Present <span class="tag-sub">(Every Saturday)</span></div>
+                </div>
+                <ul class="bullet-list">
+                  <li>Deployed weekly on a bank-wide hardware upgrade project across <strong>5+ branch locations</strong>, maintaining 20+ workstations, 8+ customer kiosks, and 10+ queue-display TVs per deployment.</li>
+                  <li>Served as the on-site technical liaison, briefing branch staff and managers before and after each deployment, explaining changes made, expected outcomes, and escalation steps in clear, non-technical language.</li>
+                  <li>Coordinated with remote controllers to resolve hardware and software issues; assisted with server upgrades and printer migrations across multiple branch environments.</li>
+                </ul>
+              </div>
             </div>
-            <p>
-              Java, SQL, Python, PHP, JavaScript, TypeScript, C++, HTML, CSS
-            </p>
-          </article>
-          <article class="info-card">
-            <div class="info-card-header">
-              <div class="info-card-icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <rect x="4" y="4" width="16" height="16" rx="3" stroke="currentColor" stroke-width="2"/>
-                  <rect x="8" y="8" width="8" height="8" rx="2" fill="currentColor" opacity="0.18"/>
-                  <path d="M4 12H20" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+
+            <!-- Item 2: NLP Business Development Services -->
+            <div class="timeline-card glass-card">
+              <div class="timeline-badge">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polyline points="16 18 22 12 16 6"/>
+                  <polyline points="8 6 2 12 8 18"/>
                 </svg>
               </div>
-              <h3>Frameworks & Libraries</h3>
+              <div class="timeline-content">
+                <div class="timeline-header">
+                  <div>
+                    <h3 class="role-title">Software Developer Intern</h3>
+                    <div class="company-name">NLP Business Development Services, Quezon City</div>
+                  </div>
+                  <div class="period-pill">May 2025 – Aug 2025</div>
+                </div>
+                <ul class="bullet-list">
+                  <li>Developed and maintained full-stack web applications using <strong>CodeIgniter (PHP)</strong> and <strong>MySQL</strong> in a production environment.</li>
+                  <li>Managed and maintained client databases, writing queries, ensuring data integrity, and supporting backend operations.</li>
+                  <li>Collaborated using <strong>Git, Bitbucket, and Trello</strong> in a sprint-based team workflow to manage tasks and ensure clean deployments.</li>
+                  <li>Diagnosed and resolved production bugs, reporting findings and progress to senior engineers within structured sprint cycles.</li>
+                </ul>
+              </div>
             </div>
-            <p>
-              React.js, React Native, Spring Boot, FastAPI, Laravel, Tailwind
-              CSS
-            </p>
-          </article>
-          <article class="info-card">
-            <div class="info-card-header">
-              <div class="info-card-icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <ellipse cx="12" cy="7" rx="7" ry="3" stroke="currentColor" stroke-width="2"/>
-                  <path d="M5 7V14C5 16.7614 9.13401 19 14 19C18.866 19 23 16.7614 23 14V7" stroke="currentColor" stroke-width="2"/>
-                  <path d="M5 11C5 13.7614 9.13401 16 14 16C18.866 16 23 13.7614 23 11" stroke="currentColor" stroke-width="2"/>
+
+            <!-- Item 3: Caloocan City Manpower Training Center -->
+            <div class="timeline-card glass-card">
+              <div class="timeline-badge">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
+                  <path d="M6 12v5c3 3 9 3 12 0v-5"/>
                 </svg>
               </div>
-              <h3>Databases & Tools</h3>
-            </div>
-            <p>
-              MySQL, PostgreSQL, Git, GitHub, GitLab, Bitbucket, Termius, Expo
-            </p>
-          </article>
-          <article class="info-card">
-            <div class="info-card-header">
-              <div class="info-card-icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M6 15C5.44772 15 5 14.5523 5 14C5 12.3431 6.34315 11 8 11H9.26C9.66622 9.26818 11.2274 8 13 8C14.8807 8 16.4185 9.51771 16.4983 11.3858C17.7301 11.6167 18.7 12.6604 18.7 14C18.7 15.6569 17.3569 17 15.7 17H6Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                  <path d="M6 15H15.7" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                </svg>
+              <div class="timeline-content">
+                <div class="timeline-header">
+                  <div>
+                    <h3 class="role-title">Trainer's Assistant: Basic Computer Operations</h3>
+                    <div class="company-name">Caloocan City Manpower Training Center</div>
+                  </div>
+                  <div class="period-pill">July 2023 – Aug 2023</div>
+                </div>
+                <ul class="bullet-list">
+                  <li>Taught students foundational computer operations and Microsoft Office applications (Word, Excel, PowerPoint) in a structured classroom environment.</li>
+                  <li>Provided client-facing IT support; diagnosed and resolved hardware, software, peripheral, and network connectivity issues.</li>
+                </ul>
               </div>
-              <h3>Cloud & Infrastructure</h3>
             </div>
-            <p>DigitalOcean VPS, Hostinger, Linux VPS management</p>
-          </article>
-          <article class="info-card">
-            <div class="info-card-header">
-              <div class="info-card-icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M12 3L13.5 7.5L18 8L14.25 11.25L15.3 15.75L12 13.75L8.7 15.75L9.75 11.25L6 8L10.5 7.5L12 3Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
-                </svg>
-              </div>
-              <h3>Specializations</h3>
-            </div>
-            <p>
-              Business Intelligence analytics, AI/RAG integration, RBAC systems
-            </p>
-          </article>
+          </div>
         </div>
       </section>
 
+      <!-- Featured Projects Section -->
       <section class="section" id="projects">
-        <div class="section-heading">
-          <p class="eyebrow">Projects</p>
-          <h2>
-            Selected work that reflects my engineering and problem-solving
-            approach.
-          </h2>
-        </div>
-        <div class="project-list">
-          <a
-            class="project-card"
-            href="https://atom-project.site/"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Open ATOM project in new tab"
-          >
-            <div class="project-thumb">
-              <img
-                src="assets/atom-project-image.png"
-                alt="ATOM project thumbnail"
-              />
-            </div>
-            <div class="project-content">
-              <div class="project-meta">2025 · Enterprise Platform</div>
-              <h3>ATOM — Automated Transcycle Operations & Management</h3>
-              <p>
-                A full-stack dealership management system for Transcycle across
-                5 branches, supporting inventory, loans, and retail operations
-                on web and Android platforms.
-              </p>
-              <ul>
-                <li>
-                  Designed a 7-tier RBAC matrix to enforce strict data isolation
-                  across roles.
-                </li>
-                <li>
-                  Built AI-driven BI dashboards that transformed raw dealership
-                  data into actionable insights.
-                </li>
-                <li>
-                  Integrated a RAG-based customer support chatbot to automate
-                  contextual inquiries.
-                </li>
-                <li>
-                  Led QA validation covering security and performance for
-                  stakeholders across all branches.
-                </li>
-              </ul>
-              <div class="project-stack">
-                <span><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/react.svg" alt="React logo" /> React</span>
-                <span><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/typescript.svg" alt="TypeScript logo" /> TypeScript</span>
-                <span><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/laravel.svg" alt="Laravel logo" /> Laravel</span>
-                <span><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/fastapi.svg" alt="FastAPI logo" /> FastAPI</span>
-                <span><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/git.svg" alt="Git logo" /> Git</span>
-                <span><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/gitlab.svg" alt="GitLab logo" /> GitLab</span>
-                <span>React Native</span>
-                <span>Gemini</span>
-                <span>Grok</span>
-                <span><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/cloudinary.svg" alt="Cloudinary logo" /> Cloudinary</span>
-              </div>
-              <div class="project-links">
-                <span>Open project</span>
-              </div>
-            </div>
-          </a>
+        <div class="container">
+          <div class="section-header text-center">
+            <p class="section-eyebrow">Featured Work</p>
+            <h2 class="section-title">Key Projects</h2>
+            <div class="title-underline"></div>
+          </div>
 
-          <a
-            class="project-card"
-            href="https://speaql.alwinalon.tech"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Open SpeaQL project placeholder in new tab"
-          >
-            <div class="project-thumb">
-              <img
-                src="assets/brave_screenshot_speaql-ui-h9c2hnbvchb9bhh4.malaysiawest-01.azurewebsites.net.png"
-                alt="SpeaQL project thumbnail"
-              />
-            </div>
-            <div class="project-content">
-              <div class="project-meta">2025</div>
-              <h3>SpeaQL — AI-Powered Natural Language Database Interface</h3>
-              <p>
-                A natural language-to-SQL engine built to support zero-config
-                and high-precision query modes.
-              </p>
-              <ul>
-                <li>
-                  Engineered a hybrid NL2SQL pipeline with LangChain-based
-                  context injection.
-                </li>
-                <li>
-                  Implemented validation middleware to detect and block SQL
-                  injection attempts.
-                </li>
-                <li>
-                  Built a responsive Streamlit interface for rapid query
-                  iteration and feedback.
-                </li>
-                <li>
-                  Benchmarked performance across PostgreSQL and SQLite to guide
-                  tuning decisions.
-                </li>
-              </ul>
-              <div class="project-stack">
-                <span><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/fastapi.svg" alt="FastAPI logo" /> FastAPI</span>
-                <span><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/postgresql.svg" alt="PostgreSQL logo" /> PostgreSQL</span>
-                <span><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/python.svg" alt="Python logo" /> Python</span>
-                <span><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/streamlit.svg" alt="Streamlit logo" /> Streamlit</span>
+          <div class="projects-grid">
+            <!-- Project 1: ATOM -->
+            <article class="project-card glass-card">
+              <div class="project-image-box">
+                <img src="assets/atom-project-image.png" alt="ATOM Dealership System Screenshot" />
+                <div class="project-overlay">
+                  <a href="https://atom-project.site/" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-primary">
+                    Visit Live Site ↗
+                  </a>
+                </div>
               </div>
-              <div class="project-links">
-                <span>View details</span>
+              <div class="project-body">
+                <div class="project-header-meta">
+                  <span class="project-category">Enterprise Platform</span>
+                  <span class="project-year">2025</span>
+                </div>
+                <h3 class="project-title">
+                  <a href="https://atom-project.site/" target="_blank" rel="noopener noreferrer">
+                    ATOM: Automated Transcycle Operations & Management
+                  </a>
+                </h3>
+                <p class="project-description">
+                  Co-engineered a multi-platform enterprise dealership system with a full Web application and an Android mobile app (React Native/Expo), managing inventory, loan processing, and retail operations across 5 live Transcycle branches.
+                </p>
+
+                <ul class="bullet-list project-highlights">
+                  <li>Designed a <strong>7-tier RBAC permission matrix</strong> enforcing strict data isolation across all organizational roles from system admin down to branch-level staff.</li>
+                  <li>Built <strong>AI-driven BI dashboards</strong> converting raw dealership metrics into visual management reports; integrated a <strong>RAG-based Gemini AI chatbot</strong> to automate customer inquiries.</li>
+                  <li>Led end-to-end QA validation across all 5 branches, testing security, performance, and data integrity.</li>
+                </ul>
+
+                <div class="tech-stack-chips">
+                  <span class="tech-chip">React</span>
+                  <span class="tech-chip">TypeScript</span>
+                  <span class="tech-chip">Laravel</span>
+                  <span class="tech-chip">React Native</span>
+                  <span class="tech-chip">Expo</span>
+                  <span class="tech-chip">Gemini AI</span>
+                  <span class="tech-chip">Grok</span>
+                  <span class="tech-chip">FastAPI</span>
+                  <span class="tech-chip">GitLab</span>
+                </div>
+
+                <div class="project-actions">
+                  <a href="https://atom-project.site/" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">
+                    Open Project URL ↗
+                  </a>
+                </div>
               </div>
-            </div>
-          </a>
+            </article>
+
+            <!-- Project 2: SpeaQL -->
+            <article class="project-card glass-card">
+              <div class="project-image-box">
+                <img src="assets/brave_screenshot_speaql-ui-h9c2hnbvchb9bhh4.malaysiawest-01.azurewebsites.net.png" alt="SpeaQL UI Interface Screenshot" />
+                <div class="project-overlay">
+                  <a href="https://speaql.alwinalon.tech" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-primary">
+                    Visit Live App ↗
+                  </a>
+                </div>
+              </div>
+              <div class="project-body">
+                <div class="project-header-meta">
+                  <span class="project-category">AI & Database Engine</span>
+                  <span class="project-year">2025</span>
+                </div>
+                <h3 class="project-title">
+                  <a href="https://speaql.alwinalon.tech" target="_blank" rel="noopener noreferrer">
+                    SpeaQL: AI-Powered Natural Language Database Interface
+                  </a>
+                </h3>
+                <p class="project-description">
+                  Engineered a hybrid NL2SQL engine translating plain English into accurate SQL queries, supporting zero-config mode for quick lookups and high-precision mode for complex operations making databases accessible to non-technical users.
+                </p>
+
+                <ul class="bullet-list project-highlights">
+                  <li>Implemented <strong>LangChain pipelines</strong> for dynamic schema-aware context injection.</li>
+                  <li>Built <strong>AI-driven validation middleware</strong> to intercept and block SQL injection attempts before query execution.</li>
+                  <li>Developed a responsive Streamlit interface and benchmarked latency & accuracy across PostgreSQL and SQLite dialects.</li>
+                </ul>
+
+                <div class="tech-stack-chips">
+                  <span class="tech-chip">Python</span>
+                  <span class="tech-chip">FastAPI</span>
+                  <span class="tech-chip">Streamlit</span>
+                  <span class="tech-chip">LangChain</span>
+                  <span class="tech-chip">Groq</span>
+                  <span class="tech-chip">PostgreSQL</span>
+                  <span class="tech-chip">SQLite</span>
+                </div>
+
+                <div class="project-actions">
+                  <a href="https://speaql.alwinalon.tech" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">
+                    Open SpeaQL URL ↗
+                  </a>
+                </div>
+              </div>
+            </article>
+          </div>
         </div>
       </section>
 
-      <section class="section" id="experience">
-        <div class="section-heading">
-          <p class="eyebrow">Work Experience</p>
-          <h2>
-            Experience that strengthened both my technical and collaborative
-            skills.
-          </h2>
+      <!-- Technical Skills Section -->
+      <section class="section bg-alt" id="skills">
+        <div class="container">
+          <div class="section-header text-center">
+            <p class="section-eyebrow">Capabilities & Toolkit</p>
+            <h2 class="section-title">Technical Skills</h2>
+            <div class="title-underline"></div>
+          </div>
+
+          <div class="skills-wrapper">
+            <!-- Languages -->
+            <div class="skill-category-card glass-card">
+              <div class="category-header">
+                <div class="category-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="16 18 22 12 16 6"/>
+                    <polyline points="8 6 2 12 8 18"/>
+                  </svg>
+                </div>
+                <h3>Languages</h3>
+              </div>
+              <div class="skills-list">
+                <span class="skill-tag">PHP</span>
+                <span class="skill-tag">JavaScript</span>
+                <span class="skill-tag">TypeScript</span>
+                <span class="skill-tag">Python</span>
+                <span class="skill-tag">Java</span>
+                <span class="skill-tag">SQL</span>
+                <span class="skill-tag">HTML</span>
+                <span class="skill-tag">CSS</span>
+              </div>
+            </div>
+
+            <!-- Frameworks -->
+            <div class="skill-category-card glass-card">
+              <div class="category-header">
+                <div class="category-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="4" y="4" width="16" height="16" rx="2" ry="2"/>
+                    <rect x="9" y="9" width="6" height="6"/>
+                    <line x1="9" y1="1" x2="9" y2="4"/>
+                    <line x1="15" y1="1" x2="15" y2="4"/>
+                    <line x1="9" y1="20" x2="9" y2="23"/>
+                    <line x1="15" y1="20" x2="15" y2="23"/>
+                  </svg>
+                </div>
+                <h3>Frameworks</h3>
+              </div>
+              <div class="skills-list">
+                <span class="skill-tag">React.js</span>
+                <span class="skill-tag">React Native</span>
+                <span class="skill-tag">Laravel</span>
+                <span class="skill-tag">CodeIgniter</span>
+                <span class="skill-tag">FastAPI</span>
+                <span class="skill-tag">Node.js/Express</span>
+                <span class="skill-tag">Spring Boot</span>
+                <span class="skill-tag">Tailwind CSS</span>
+              </div>
+            </div>
+
+            <!-- Databases & Tools -->
+            <div class="skill-category-card glass-card">
+              <div class="category-header">
+                <div class="category-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <ellipse cx="12" cy="5" rx="9" ry="3"/>
+                    <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/>
+                    <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/>
+                  </svg>
+                </div>
+                <h3>Databases & Tools</h3>
+              </div>
+              <div class="skills-list">
+                <span class="skill-tag">MySQL</span>
+                <span class="skill-tag">PostgreSQL</span>
+                <span class="skill-tag">Git</span>
+                <span class="skill-tag">GitHub</span>
+                <span class="skill-tag">Bitbucket</span>
+                <span class="skill-tag">Trello</span>
+                <span class="skill-tag">Termius</span>
+                <span class="skill-tag">Expo</span>
+              </div>
+            </div>
+
+            <!-- Cloud & Infra -->
+            <div class="skill-category-card glass-card">
+              <div class="category-header">
+                <div class="category-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/>
+                  </svg>
+                </div>
+                <h3>Cloud & Infrastructure</h3>
+              </div>
+              <div class="skills-list">
+                <span class="skill-tag">Azure</span>
+                <span class="skill-tag">DigitalOcean VPS</span>
+                <span class="skill-tag">Hostinger</span>
+                <span class="skill-tag">Linux VPS Management</span>
+              </div>
+            </div>
+
+            <!-- Specializations -->
+            <div class="skill-category-card glass-card category-full-width">
+              <div class="category-header">
+                <div class="category-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+                  </svg>
+                </div>
+                <h3>Core Specializations</h3>
+              </div>
+              <div class="skills-list">
+                <span class="skill-tag tag-featured">Full-Stack Development</span>
+                <span class="skill-tag tag-featured">Mobile Development</span>
+                <span class="skill-tag tag-featured">REST API Design</span>
+                <span class="skill-tag tag-featured">Database Management</span>
+                <span class="skill-tag tag-featured">BI Analytics</span>
+                <span class="skill-tag tag-featured">AI/RAG Integration</span>
+                <span class="skill-tag tag-featured">RBAC Systems</span>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="timeline">
-          <article class="timeline-item">
-            <div class="timeline-date">May 2025 – August 2025</div>
+      </section>
+
+      <!-- Certifications & Education Grid -->
+      <section class="section" id="certifications">
+        <div class="container">
+          <div class="two-column-grid">
+            <!-- Certifications Column -->
             <div>
-              <h3>Software Engineer Intern</h3>
-              <p class="company">
-                NLP Business Development Services, Culiat, Quezon City
-              </p>
-              <ul>
-                <li>
-                  Contributed to full-stack development, maintenance, and
-                  debugging of web applications.
-                </li>
-                <li>
-                  Collaborated in Git and Bitbucket-based workflows for sprint
-                  delivery and production releases.
-                </li>
-                <li>
-                  Gained hands-on experience with secure hardware-software
-                  integrations and local network environments.
-                </li>
-              </ul>
-            </div>
-          </article>
+              <div class="section-header">
+                <p class="section-eyebrow">Verified Training</p>
+                <h2 class="section-title">Certifications</h2>
+                <div class="title-underline left-aligned"></div>
+              </div>
 
-          <article class="timeline-item">
-            <div class="timeline-date">July 2023 – August 2023</div>
-            <div>
-              <h3>SPES Trainee — IT Support / Technical Training Assistant</h3>
-              <p class="company">
-                LGU Training Center (BCO Assigned), Libis, Caloocan City
-              </p>
-              <ul>
-                <li>
-                  Delivered technical training and client-facing IT support to
-                  students.
-                </li>
-                <li>
-                  Diagnosed and resolved hardware, software, peripheral, and
-                  network issues.
-                </li>
-                <li>
-                  Maintained classroom IT infrastructure and supported smooth
-                  digital operations.
-                </li>
-              </ul>
+              <div class="cert-list">
+                <div class="cert-card glass-card">
+                  <div class="cert-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <circle cx="12" cy="8" r="7"/>
+                      <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/>
+                    </svg>
+                  </div>
+                  <div class="cert-info">
+                    <h4>Hardware and Upgrade Support</h4>
+                    <p class="issuer">Cisco Networking Academy</p>
+                    <a href="assets/Hardware_and_Upgrade_Support_certificate.pdf" target="_blank" rel="noopener noreferrer" class="cert-link">
+                      <span>View Certificate PDF</span>
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                        <polyline points="15 3 21 3 21 9"></polyline>
+                        <line x1="10" y1="14" x2="21" y2="3"></line>
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+
+                <div class="cert-card glass-card">
+                  <div class="cert-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                    </svg>
+                  </div>
+                  <div class="cert-info">
+                    <h4>Introduction to Cyber Security</h4>
+                    <p class="issuer">Cisco Networking Academy</p>
+                    <a href="assets/cybersecciscocert.pdf" target="_blank" rel="noopener noreferrer" class="cert-link">
+                      <span>View Certificate PDF</span>
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                        <polyline points="15 3 21 3 21 9"></polyline>
+                        <line x1="10" y1="14" x2="21" y2="3"></line>
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
             </div>
-          </article>
+
+            <!-- Education Column -->
+            <div id="education">
+              <div class="section-header">
+                <p class="section-eyebrow">Academic Background</p>
+                <h2 class="section-title">Education</h2>
+                <div class="title-underline left-aligned"></div>
+              </div>
+
+              <div class="education-card glass-card">
+                <div class="edu-badge">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
+                    <path d="M6 12v5c3 3 9 3 12 0v-5"/>
+                  </svg>
+                </div>
+                <div class="edu-details">
+                  <span class="edu-year">2022 – 2026</span>
+                  <h3>Bachelor of Science in Information Systems</h3>
+                  <div class="institution">University of Caloocan City</div>
+                  <p class="edu-desc">
+                    Comprehensive study of enterprise information systems, database management, full-stack software development, RESTful APIs, business intelligence, and network systems architecture.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
-      <section class="section" id="education">
-        <div class="section-heading">
-          <p class="eyebrow">Education</p>
-          <h2>
-            Academic foundation in information systems and software development.
-          </h2>
-        </div>
-        <div class="education-card">
-          <h3>Bachelor of Science in Information Systems</h3>
-          <p class="company">University of Caloocan City · 2022 – 2026</p>
-          <p>
-            Built a strong foundation in systems analysis, database management,
-            software development, and business-oriented technology solutions.
-          </p>
-        </div>
-      </section>
+      <!-- Contact Section -->
+      <section class="section bg-alt" id="contact">
+        <div class="container">
+          <div class="section-header text-center">
+            <p class="section-eyebrow">Get In Touch</p>
+            <h2 class="section-title">Contact Me</h2>
+            <div class="title-underline"></div>
+            <p class="section-desc">
+              Have an enterprise opportunity, full-stack project, or inquiry? Feel free to reach out directly.
+            </p>
+          </div>
 
-      <section class="section" id="contact">
-        <div class="section-heading">
-          <p class="eyebrow">Contact Me</p>
-          <h2>Let’s talk about your next project or opportunity.</h2>
-        </div>
-        <div class="contact-card">
-          <p>
-            Send a message directly to my inbox and I’ll get back to you as soon
-            as possible.
-          </p>
-          <form id="contactForm">
-            <div class="form-row">
-              <label for="name">Name</label>
-              <input id="name" name="name" type="text" required />
+          <div class="contact-grid">
+            <div class="contact-info-column">
+              <div class="contact-card glass-card">
+                <div class="contact-item">
+                  <div class="contact-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                      <polyline points="22,6 12,13 2,6"/>
+                    </svg>
+                  </div>
+                  <div>
+                    <span class="contact-label">Email Address</span>
+                    <a href="mailto:alwinalon0@gmail.com" class="contact-val">alwinalon0@gmail.com</a>
+                  </div>
+                </div>
+
+                <div class="contact-item">
+                  <div class="contact-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                    </svg>
+                  </div>
+                  <div>
+                    <span class="contact-label">Phone Number</span>
+                    <a href="tel:09910740584" class="contact-val">0991 074 0584</a>
+                  </div>
+                </div>
+
+                <div class="contact-item">
+                  <div class="contact-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                      <circle cx="12" cy="10" r="3"></circle>
+                    </svg>
+                  </div>
+                  <div>
+                    <span class="contact-label">Location</span>
+                    <span class="contact-val">Caloocan City, Metro Manila</span>
+                  </div>
+                </div>
+
+                <div class="contact-item">
+                  <div class="contact-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <circle cx="12" cy="12" r="10"></circle>
+                      <line x1="2" y1="12" x2="22" y2="12"></line>
+                      <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                    </svg>
+                  </div>
+                  <div>
+                    <span class="contact-label">Website Domain</span>
+                    <a href="https://alwinalon.tech" target="_blank" rel="noopener noreferrer" class="contact-val">alwinalon.tech</a>
+                  </div>
+                </div>
+              </div>
             </div>
-            <div class="form-row">
-              <label for="email">Email</label>
-              <input id="email" name="email" type="email" required />
+
+            <div class="contact-form-column">
+              <form class="contact-form glass-card" id="contactForm">
+                <div class="form-group">
+                  <label for="name">Your Name</label>
+                  <input type="text" id="name" name="name" placeholder="John Doe" required />
+                </div>
+
+                <div class="form-group">
+                  <label for="email">Your Email</label>
+                  <input type="email" id="email" name="email" placeholder="john@example.com" required />
+                </div>
+
+                <div class="form-group">
+                  <label for="message">Message</label>
+                  <textarea id="message" name="message" rows="5" placeholder="Hi Alwin, I'd like to talk about..." required></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-primary btn-block">
+                  <span>Send Message</span>
+                  <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="22" y1="2" x2="11" y2="13"/>
+                    <polygon points="22 2 15 22 11 13 2 9 22 2"/>
+                  </svg>
+                </button>
+                <div id="formStatus" class="form-status" aria-live="polite"></div>
+              </form>
             </div>
-            <div class="form-row">
-              <label for="message">Message</label>
-              <textarea
-                id="message"
-                name="message"
-                rows="5"
-                required
-              ></textarea>
-            </div>
-            <button class="button primary" type="submit">Send Message</button>
-            <p id="formStatus" class="form-status" aria-live="polite"></p>
-          </form>
+          </div>
         </div>
       </section>
     </main>
 
+    <!-- Footer -->
     <footer class="footer">
-      <p>© <span id="year"></span> Alwin A. Alon. All rights reserved.</p>
-      <div class="footer-links">
-        <a href="mailto:alwinalon0@gmail.com">Email</a>
-        <a href="https://github.com/alweeen">GitHub</a>
-        <a href="https://www.linkedin.com/in/alwin-alon-3160b4370/">LinkedIn</a>
+      <div class="container footer-content">
+        <div class="footer-brand">
+          <span class="brand-text">Alwin <span class="accent-text">A. Alon</span></span>
+          <p class="footer-copy">© <span id="year"></span> Alwin A. Alon. Built with clean code & modern aesthetics.</p>
+        </div>
+
+        <div class="footer-socials">
+          <a href="https://github.com/alweeen" target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+            </svg>
+          </a>
+          <a href="https://www.linkedin.com/in/alwin-alon-3160b4370/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+              <rect x="2" y="9" width="4" height="12"/>
+              <circle cx="4" cy="4" r="2"/>
+            </svg>
+          </a>
+          <a href="mailto:alwinalon0@gmail.com" aria-label="Email Alwin">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="2" y="4" width="20" height="16" rx="2"/>
+              <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
+            </svg>
+          </a>
+        </div>
       </div>
     </footer>
 
