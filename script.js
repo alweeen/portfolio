@@ -1,63 +1,136 @@
-document.getElementById("year").textContent = new Date().getFullYear();
+// ==========================================================================
+// ALWIN A. ALON PORTFOLIO - DYNAMIC INTERACTIVITY SCRIPT
+// ==========================================================================
 
-const contactButton = document.getElementById("contactButton");
-const contactForm = document.getElementById("contactForm");
-const formStatus = document.getElementById("formStatus");
+document.addEventListener("DOMContentLoaded", () => {
+  // 1. Dynamic Footer Copyright Year
+  const yearElement = document.getElementById("year");
+  if (yearElement) {
+    yearElement.textContent = new Date().getFullYear();
+  }
 
-if (contactButton) {
-  contactButton.addEventListener("click", async (event) => {
-    event.preventDefault();
-
-    const email = "alwinalon0@gmail.com";
-    const mailtoLink = `mailto:${email}?subject=Portfolio%20Inquiry`;
-
-    window.location.href = mailtoLink;
-
-    try {
-      await navigator.clipboard.writeText(email);
-      contactButton.textContent = "Email copied";
-      setTimeout(() => {
-        contactButton.textContent = "Contact Me";
-      }, 1800);
-    } catch (error) {
-      console.warn("Clipboard copy unavailable", error);
+  // 2. Header Scroll Effect
+  const header = document.getElementById("header");
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 40) {
+      header.classList.add("scrolled");
+    } else {
+      header.classList.remove("scrolled");
     }
   });
-}
 
-if (contactForm && formStatus) {
-  contactForm.addEventListener("submit", (event) => {
-    event.preventDefault();
+  // 3. Interactive Cursor Ambient Light Track
+  const cursorGlow = document.getElementById("cursorGlow");
+  if (cursorGlow && window.innerWidth > 768) {
+    window.addEventListener("mousemove", (e) => {
+      cursorGlow.style.left = `${e.clientX}px`;
+      cursorGlow.style.top = `${e.clientY}px`;
+    });
+  }
 
-    const name = document.getElementById("name").value.trim();
-    const email = document.getElementById("email").value.trim();
-    const message = document.getElementById("message").value.trim();
+  // 4. Mobile Navigation Drawer Toggle
+  const mobileToggle = document.getElementById("mobileToggle");
+  const navMenu = document.getElementById("navMenu");
+  
+  if (mobileToggle && navMenu) {
+    mobileToggle.addEventListener("click", () => {
+      navMenu.classList.toggle("open");
+      mobileToggle.classList.toggle("active");
+    });
 
-    const subject = encodeURIComponent(`Portfolio Inquiry from ${name}`);
-    const body = encodeURIComponent(
-      `Name: ${name}\nEmail: ${email}\n\n${message}`,
-    );
-    const mailtoLink = `mailto:alwinalon0@gmail.com?subject=${subject}&body=${body}`;
+    // Close menu when clicking links
+    document.querySelectorAll(".nav-link").forEach((link) => {
+      link.addEventListener("click", () => {
+        navMenu.classList.remove("open");
+        mobileToggle.classList.remove("active");
+      });
+    });
+  }
 
-    window.location.href = mailtoLink;
-    formStatus.textContent = "Opening your email app…";
-    contactForm.reset();
-  });
-}
+  // 5. ScrollSpy - Active Navigation Link Highlighting
+  const sections = document.querySelectorAll("section[id]");
+  const navLinks = document.querySelectorAll(".nav-link");
 
-// const cursorBlur = document.createElement("div");
-// cursorBlur.className = "cursor-blur";
-// document.body.appendChild(cursorBlur);
+  const observerOptions = {
+    root: null,
+    rootMargin: "-20% 0px -70% 0px",
+    threshold: 0
+  };
 
-// window.addEventListener("mousemove", (event) => {
-//   cursorBlur.style.left = `${event.clientX}px`;
-//   cursorBlur.style.top = `${event.clientY}px`;
-// });
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        const id = entry.target.getAttribute("id");
+        navLinks.forEach((link) => {
+          if (link.getAttribute("href") === `#${id}`) {
+            link.classList.add("active");
+          } else {
+            link.classList.remove("active");
+          }
+        });
+      }
+    });
+  }, observerOptions);
 
-// window.addEventListener("mousedown", () => {
-//   cursorBlur.classList.add("cursor-blur--small");
-// });
+  sections.forEach((section) => observer.observe(section));
 
-// window.addEventListener("mouseup", () => {
-//   cursorBlur.classList.remove("cursor-blur--small");
-// });
+  // 6. Copy Email Button Feedback
+  const copyEmailBtn = document.getElementById("copyEmailBtn");
+  const copyEmailText = document.getElementById("copyEmailText");
+
+  if (copyEmailBtn && copyEmailText) {
+    copyEmailBtn.addEventListener("click", async (e) => {
+      e.preventDefault();
+      const email = "alwinalon0@gmail.com";
+
+      try {
+        await navigator.clipboard.writeText(email);
+        const originalText = copyEmailText.textContent;
+        copyEmailText.textContent = "Email Copied! ✓";
+        copyEmailBtn.style.borderColor = "var(--accent-cyan)";
+
+        setTimeout(() => {
+          copyEmailText.textContent = originalText;
+          copyEmailBtn.style.borderColor = "";
+        }, 2200);
+      } catch (err) {
+        // Fallback: trigger mailto
+        window.location.href = `mailto:${email}`;
+      }
+    });
+  }
+
+  // 7. Contact Form Handling
+  const contactForm = document.getElementById("contactForm");
+  const formStatus = document.getElementById("formStatus");
+
+  if (contactForm && formStatus) {
+    contactForm.addEventListener("submit", (e) => {
+      e.preventDefault();
+
+      const name = document.getElementById("name").value.trim();
+      const email = document.getElementById("email").value.trim();
+      const message = document.getElementById("message").value.trim();
+
+      if (!name || !email || !message) {
+        formStatus.textContent = "Please complete all fields before sending.";
+        formStatus.style.color = "#ef4444";
+        return;
+      }
+
+      const subject = encodeURIComponent(`Portfolio Inquiry from ${name}`);
+      const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`);
+      const mailtoUrl = `mailto:alwinalon0@gmail.com?subject=${subject}&body=${body}`;
+
+      formStatus.style.color = "var(--accent-cyan)";
+      formStatus.textContent = "Opening your email client...";
+      
+      window.location.href = mailtoUrl;
+
+      setTimeout(() => {
+        contactForm.reset();
+        formStatus.textContent = "Thank you! Check your email client to send the message.";
+      }, 1500);
+    });
+  }
+});
