@@ -34,14 +34,14 @@ document.addEventListener("DOMContentLoaded", () => {
   
   if (mobileToggle && navMenu) {
     mobileToggle.addEventListener("click", () => {
-      navMenu.classList.toggle("open");
+      navMenu.classList.toggle("active");
       mobileToggle.classList.toggle("active");
     });
 
     // Close menu when clicking links
     document.querySelectorAll(".nav-link").forEach((link) => {
       link.addEventListener("click", () => {
-        navMenu.classList.remove("open");
+        navMenu.classList.remove("active");
         mobileToggle.classList.remove("active");
       });
     });
@@ -132,5 +132,35 @@ document.addEventListener("DOMContentLoaded", () => {
         formStatus.textContent = "Thank you! Check your email client to send the message.";
       }, 1500);
     });
+  }
+
+  // 8. Scroll Progress Bar
+  const scrollProgressBar = document.getElementById("scrollProgressBar");
+  if (scrollProgressBar) {
+    window.addEventListener("scroll", () => {
+      const scrollTotal = document.documentElement.scrollTop || document.body.scrollTop;
+      const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      const scrollProgress = height > 0 ? (scrollTotal / height) * 100 : 0;
+      scrollProgressBar.style.width = scrollProgress + "%";
+    });
+  }
+
+  // 9. Scroll Reveal Animations (Animate Once)
+  const revealElements = document.querySelectorAll(".reveal");
+  if (revealElements.length > 0) {
+    const revealObserver = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("active");
+          observer.unobserve(entry.target); // Unobserve to animate only once
+        }
+      });
+    }, {
+      root: null,
+      rootMargin: "0px",
+      threshold: 0.1
+    });
+
+    revealElements.forEach(el => revealObserver.observe(el));
   }
 });
